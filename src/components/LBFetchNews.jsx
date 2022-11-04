@@ -1,6 +1,6 @@
 import { Card, CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
-const FetchNews = () => {
+const LBFetchNews = () => {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -17,7 +17,7 @@ const FetchNews = () => {
   }, []);
 
   return (
-    <div style={{ maxWidth: "70rem", margin: "0 auto" }}>
+    <div  style={{maxWidth: "70rem", margin: "0 auto" }}>
       <h1>Notícias</h1>
       {isLoading ? (
         <CircularProgress />
@@ -44,4 +44,4 @@ const FetchNews = () => {
   );
 };
 
-export default FetchNews;
+export default LBFetchNews;

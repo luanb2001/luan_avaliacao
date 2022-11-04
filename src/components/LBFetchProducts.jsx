@@ -9,11 +9,11 @@ import {
   } from "@mui/material";
   import React, { useEffect, useState } from "react";
   
-  const FetchProducts = () => {
+  const LBFetchProducts = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
   
-    const url = "https://dummyjson.com/products";
+    const url = "https://dummyjson.com/products/search?q=shoes";
   
     useEffect(() => {
       setIsLoading(true);
@@ -31,8 +31,10 @@ import {
     }, []);
   
     return (
+      <div>
+        <h1 style={{textAlign: "center"}}>Nossos Produtos</h1>
       <Grid container spacing={4}>
-        
+          
         {isLoading ? (
           <div>Carregando</div>
         ) : (
@@ -79,7 +81,8 @@ import {
           ))
         )}
       </Grid>
+      </div>
     );
   };
   
-  export default FetchProducts;
+  export default LBFetchProducts;
